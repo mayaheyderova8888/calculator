@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div id="esas">
+    <div class="container">
+        <form id="form">
+            <input type="text" id="cvb" />
+        </form>
+        <table >
+            <tr>
+                <td> <input class="button" id="AC" type="button" value="AC" onclick="ac()" /></td>
+                <td> <input class="button" type="button" value="C" onclick="clear()" /></td>
+                <td><input class="button" type="button" value="%" onclick="Hesabla('%')" /></td>
+                <td><input class="button" type="button" value="/" onclick="Hesabla('/')" /></td>
+            </tr>
+            <tr>
+                <td> <input class="button" type="button" value="7" onclick="Hesabla(7)" />
+                </td>
+                <td> <input class="button" type="button" value="8" onclick="Hesabla(8)" /></td>
+                <td> <input class="button" type="button" value="9" onclick="Hesabla(9)" /></td>
+                <td> <input class="button" type="button" value="*" onclick="Hesabla('*')" /></td>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="4" onclick="Hesabla(4)" /></td>
+                <td> <input class="button" type="button" value="5" onclick="Hesabla(5)" /></td>
+                <td> <input class="button" type="button" value="6" onclick="Hesabla(6)" /></td>
+                <td> <input class="button" type="button" value="-" onclick="Hesabla('-')" /></td>
+                </td>
+            </tr>
+            <tr>
+                <td> <input class="button" type="button" value="1" onclick="Hesabla(1)"></td>
+                <td> <input class="button" type="button" value="2" onclick="Hesabla(2)" /></td>
+                <td> <input class="button" type="button" value="3" onclick="Hesabla(3)" /></td>
+                <td ><input class="button" type="button" value="+" onclick="Hesabla('+')" /></td>
+                
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="0" onclick="Hesabla(0)"></td>
+                <td> <input class="button" type="button" value="." onclick="Hesabla('.')" /></td>
+                <td><input class="button" id="beraber" type="button" value="=" onclick="cavab('=')" /></td>
+            </tr>
+
+
+    
+    </table>
+</div>
+</div>
+    <script>
+      
+        function Hesabla(num) {
+            form.cvb.value += num;
+        } 
+function cavab(){
+    form.cvb.value = eval(form.cvb.value);
+}
+function ac() {
+    form.cvb.value ="0"
+}
+
+    </script>
+</body>
+
+
+
+
+</html>
